@@ -1,4 +1,5 @@
 import React, { Component, Fragment} from 'react';
+import Pagination from "../pagination/Pagination";
 
 class  StoryComponent extends Component {
     constructor(props) {
@@ -15,7 +16,8 @@ class  StoryComponent extends Component {
     render() {
         return(
             <Fragment>
-                <div style={{margin:'45px'}}>
+                <div className="main" style={{margin:'45px'}}>
+                    <Pagination/>
                     <p>You  Are</p>
                     <p>Pretty</p>
                 </div>
