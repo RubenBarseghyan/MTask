@@ -1,5 +1,4 @@
 import React, {Fragment} from "react";
-import loaderImage from "../assets/Loading";
 
 
 function ListComments(props) {
@@ -61,7 +60,7 @@ const Comments = (props) => {
                         <ul style={{ paddingLeft: "35px",  }}>{nodes}</ul>
                     </div>
             </Fragment>
-        )) ||<img id="loader" src={loaderImage}/>
+        )) || <h1 style={{margin: "15px"}}>Loading comments...</h1>
     );
 };
 export default Comments;

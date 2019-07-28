@@ -37,12 +37,17 @@ class ItemComponent extends Component {
     }
 
     getItem(item) {
-        this.setState({
-            comments: {}
-        });
-        getStoryItem(item).then((comments) => {
-            this.setState({ comments });
-        });
+        try {
+            this.setState({
+                comments: {}
+            });
+            getStoryItem(item).then((comments) => {
+                this.setState({ comments });
+            });
+
+        }catch (e) {
+            console.log(e.message);
+        }
     }
 
     render() {

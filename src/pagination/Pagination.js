@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Pagination.css";
 
 const Pagination = (props) => {
-    const { story, page, pages } = props;
+    const {page, pages } = props;
 
     let currentPage = parseInt(page, 10);
     let nextPage = currentPage !== 1 ? currentPage - 1 : currentPage;

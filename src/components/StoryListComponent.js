@@ -1,6 +1,6 @@
 import React from "react";
 import StoryListItem from "./StoryListItemComponent";
-import loaderImage from "../assets/Loading";
+import logo from '../assets/giphy.gif';
 
 const StoryListComponent = (props) => {
     const { stories, page } = props;
@@ -10,7 +10,7 @@ const StoryListComponent = (props) => {
             <ul className="story-container">
                 <StoryListItem stories={stories} page={page}/>
             </ul>
-        )) || <img id="loader" src={loaderImage}/>
+        )) || <img id="loader" src={logo} alt="logo"/>
     );
 };
 

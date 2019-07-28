@@ -23,24 +23,34 @@ export const validateItem = (item) => {
 };
 
 export const getStory = async (page) => {
-    return await getStoryPage(page).then((data) => {
-        return (
-            (data &&
-                data.map((item, index) => {
-                    return {
-                        ...item,
-                        index
-                    };
-                })) ||
-            []
-        );
-    });
+    try {
+        return await getStoryPage(page).then((data) => {
+            return (
+                (data &&
+                    data.map((item, index) => {
+                        return {
+                            ...item,
+                            index
+                        };
+                    })) ||
+                []
+            );
+        });
+    } catch (e) {
+        console.log(e.message);
+    }
+
 };
 
 export const getStoryItem = async (item) => {
-    return await getItem(item).then((data) => {
-        return data;
-    });
+    try {
+        return await getItem(item).then((data) => {
+            return data;
+        });
+    } catch (e) {
+        console.log(e.message);
+    }
+
 };
 
 
