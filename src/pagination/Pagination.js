@@ -10,13 +10,13 @@ const Pagination = (props) => {
     let prevPage = currentPage !== pages ? currentPage + 1 : currentPage;
 
     return (
-        <div className="Pagination">
-            {currentPage !== 1 && <Link to={`/${story}/${nextPage}`}> &#171; prev </Link>}
+        <div className="pagination">
+            {currentPage !== 1 && <Link to={`/news/${nextPage}`}> &#171; prev </Link>}
 
             <span>{`${currentPage}/${pages}`}</span>
 
             {currentPage !== pages && (
-                <Link to={`/${story}/${prevPage}`}> next &#187;</Link>
+                <Link to={`/news/${prevPage}`}> next &#187;</Link>
             )}
         </div>
     );

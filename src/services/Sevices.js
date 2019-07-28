@@ -14,7 +14,7 @@ export const getStoryPage = async (page) => {
             return response.json();
         })
         .catch((e) => {
-            console.log(e.message, 'error getting data');
+            console.log(e.message);
         });
 };
 
@@ -24,6 +24,6 @@ export const getItem = (id) => {
         return response.json();
     })
         .catch((e) => {
-            console.log(e.message, 'error getting item by id');
+            console.log(e.message)
         });
 };

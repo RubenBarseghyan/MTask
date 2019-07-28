@@ -18,7 +18,7 @@ export default function mainComponent(importComponent) {
 
         render() {
             const { module: Component } = this.state;
-            return Component ? <Component {...this.props} /> : <img alt="this is loader" src={loaderImage}/>;
+            return Component ? <Component {...this.props} /> : <img id="loader" src={loaderImage}/>;
         }
     }
 
